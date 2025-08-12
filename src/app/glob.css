@@ -1,0 +1,40 @@
+
+.prose {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  width: 100%;
+}
+
+.prose code {
+  white-space: pre-wrap;
+}
+
+/* Code block styles */
+pre {
+  overflow-x: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  display: inline-block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Ensure ScrollArea content gets proper width */
+[data-slot="scroll-area-viewport"] {
+  width: 100% !important;
+}
+
+/* Chat bubble message overrides */
+.chatbubble-message {
+  overflow-x: visible;
+  width: 100%;
+}
+
