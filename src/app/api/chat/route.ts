@@ -3,12 +3,12 @@ import { streamText } from 'ai';
 import { SYSTEM_PROMPT } from './prompt';
 import { getContact } from './tools/getContact';
 import { getCrazy } from './tools/getCrazy';
-import { getInternship } from './tools/getIntership';
+import { getInternship } from './tools/getInternship';
 import { getPresentation } from './tools/getPresentation';
 import { getProjects } from './tools/getProjects';
 import { getResume } from './tools/getResume';
 import { getSkills } from './tools/getSkills';
-import { getSports } from './tools/getSport';
+import { getSports } from './tools/getSports';
 import { getWeather } from './tools/getWeather';
 
 export const maxDuration = 30;

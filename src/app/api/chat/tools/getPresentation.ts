@@ -8,7 +8,8 @@ export const getPresentation = tool({
   execute: async () => {
     return {
       presentation:
-        "I'm Yuvraj Singh (you can call me Yuvi), a 22-year-old developer passionate about software development, AI, and machine learning. I love tackling new challenges, learning, and building innovative solutions. Beyond tech, I enjoy riding my bike and playing snooker.",
+        "Here is a little bit about me, you can see it above!",
+        //"I'm Yuvraj Singh (you can call me Yuvi), a 22-year-old developer passionate about software development, AI, and machine learning. I love tackling new challenges, learning, and building innovative solutions. Beyond tech, I enjoy riding my bike and playing snooker.",
     };
   },
 });

@@ -33,7 +33,7 @@ const InternshipCard = () => {
               Yuvraj Singh
             </h2>
             <p className="text-muted-foreground text-sm">
-              Intership Application
+              Internship Application
             </p>
           </div>
         </div>
