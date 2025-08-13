@@ -373,4 +373,4 @@ function QuestionItem({ question, onClick, isSpecial }: QuestionItemProps) {
       </motion.div>
     </motion.button>
   );
-}
+} 

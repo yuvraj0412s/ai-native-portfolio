@@ -16,6 +16,7 @@ import {
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
+import { ThemeToggle } from '@/components/ui/ThemeToggle'; // Import the theme toggle
 
 /* ---------- quick-question data ---------- */
 const questions = {
@@ -93,7 +94,8 @@ export default function Home() {
       </div>
 
       {/* GitHub button */}
-      <div className="absolute top-6 right-8 z-20">
+      <div className="absolute top-6 right-8 z-20 flex items-center gap-2">
+        <ThemeToggle />
         <GithubButton
           //targetStars={68}
           animationDuration={1.5}
