@@ -181,7 +181,7 @@ export default function HelperBoost({
           >
             <button
               onClick={toggleVisibility}
-              className="flex items-center gap-1 px-3 py-1 text-xs text-gray-500 transition-colors hover:text-gray-700"
+              className="flex items-center gap-1 px-3 py-1 text-xs text-gray-500 dark:text-gray-400 transition-colors hover:text-gray-700 dark:hover:text-gray-200"
             >
               {isVisible ? (
                 <>
@@ -205,17 +205,17 @@ export default function HelperBoost({
                 style={{ justifyContent: 'safe center' }}
               >
                 {questionConfig.map(({ key, color, icon: Icon }) => (
-                  <Button
-                    key={key}
-                    onClick={() => handleQuestionClick(key)}
-                    variant="outline"
-                    className="border-border hover:bg-border/30 h-auto min-w-[100px] flex-shrink-0 cursor-pointer rounded-xl border bg-white/80 px-4 py-3 shadow-none backdrop-blur-sm transition-none active:scale-95"
-                  >
-                    <div className="flex items-center gap-3 text-gray-700">
-                      <Icon size={18} strokeWidth={2} color={color} />
-                      <span className="text-sm font-medium">{key}</span>
-                    </div>
-                  </Button>
+                <Button
+                  key={key}
+                  onClick={() => handleQuestionClick(key)}
+                  variant="outline"
+                  className="border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 h-auto min-w-[100px] flex-shrink-0 cursor-pointer rounded-xl bg-white/80 dark:bg-gray-800/80 px-4 py-3 shadow-none backdrop-blur-sm transition-none active:scale-95"
+                >
+                  <div className="flex items-center gap-3 text-gray-900 dark:text-gray-100">
+                    <Icon size={18} strokeWidth={2} color={color} />
+                    <span className="text-sm font-medium">{key}</span>
+                  </div>
+                </Button>
                 ))}
 
                 {/* Need Inspiration Button */}
@@ -223,20 +223,19 @@ export default function HelperBoost({
                   <Tooltip delayDuration={0}>
                     <TooltipTrigger asChild>
                       <Drawer.Trigger className="group relative flex flex-shrink-0 items-center justify-center">
-                        <motion.div
-                          className="hover:bg-border/30 flex h-auto cursor-pointer items-center space-x-1 rounded-xl border border-neutral-200 bg-white/80 px-4 py-3 text-sm backdrop-blur-sm transition-all duration-200 dark:border-neutral-800 dark:bg-neutral-900"
-                          whileHover={{ scale: 1 }}
-                          whileTap={{ scale: 0.98 }}
-                        >
-                          <div className="flex items-center gap-3 text-gray-700">
-                            <CircleEllipsis
-                              className="h-[20px] w-[18px]"
-                              //style={{ color: '#3B82F6' }}
-                              strokeWidth={2}
-                            />
-                            {/*<span className="text-sm font-medium">More</span>*/}
-                          </div>
-                        </motion.div>
+                      <motion.div
+                        className="hover:bg-gray-100 dark:hover:bg-gray-700 flex h-auto cursor-pointer items-center space-x-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-800/80 px-4 py-3 text-sm backdrop-blur-sm transition-all duration-200"
+                        whileHover={{ scale: 1 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <div className="flex items-center gap-3 text-gray-900 dark:text-gray-100">
+                          <CircleEllipsis
+                            className="h-[20px] w-[18px] text-primary dark:text-primary-light" // or use suitable text colors here
+                            strokeWidth={2}
+                          />
+                          {/* <span className="text-sm font-medium">More</span> */}
+                        </div>
+                      </motion.div>
                       </Drawer.Trigger>
                     </TooltipTrigger>
                     <TooltipContent>
@@ -252,12 +251,13 @@ export default function HelperBoost({
         {/* Drawer Content */}
         <Drawer.Portal>
           <Drawer.Overlay className="fixed inset-0 z-100 bg-black/60 backdrop-blur-xs" />
-          <Drawer.Content className="fixed right-0 bottom-0 left-0 z-100 mt-24 flex h-[80%] flex-col rounded-t-[10px] bg-gray-100 outline-none lg:h-[60%]">
-            <div className="flex-1 overflow-y-auto rounded-t-[10px] bg-white p-4">
+
+          <Drawer.Content className="fixed right-0 bottom-0 left-0 z-100 mt-24 flex h-[80%] flex-col rounded-t-[10px] bg-background outline-none lg:h-[60%]">
+            <div className="flex-1 overflow-y-auto rounded-t-[10px] bg-card p-4">
               <div className="mx-auto max-w-md space-y-4">
                 <div
                   aria-hidden
-                  className="mx-auto mb-8 h-1.5 w-12 flex-shrink-0 rounded-full bg-gray-300"
+                  className="mx-auto mb-8 h-1.5 w-12 flex-shrink-0 rounded-full bg-muted"
                 />
                 <div className="mx-auto w-full max-w-md">
                   <div className="space-y-8 pb-16">
@@ -298,8 +298,9 @@ function CategorySection({
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-2.5 px-1">
-        <Icon className="h-5 w-5" />
-        <Drawer.Title className="text-[22px] font-medium text-gray-900">
+        <Icon className="h-5 w-5 text-gray-700 dark:text-gray-300" />
+        {/* <Drawer.Title className="text-[22px] font-medium text-gray-900"> */}
+        <Drawer.Title className="text-[22px] font-medium text-gray-900 dark:text-gray-100">
           {name}
         </Drawer.Title>
       </div>
@@ -335,20 +336,16 @@ function QuestionItem({ question, onClick, isSpecial }: QuestionItemProps) {
       className={cn(
         'flex w-full items-center justify-between rounded-[10px]',
         'text-md px-6 py-4 text-left font-normal',
-        'transition-all',
+        'transition-colors duration-300',
         'focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500',
-        isSpecial ? 'bg-black' : 'bg-[#F7F8F9]'
+        isSpecial
+          ? 'bg-black text-white hover:bg-gray-800 dark:hover:bg-gray-700' // lighter on hover for dark bg
+          : 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700 hover:bg-gray-200'
       )}
       onClick={onClick}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      whileHover={{
-        backgroundColor: isSpecial ? undefined : '#F0F0F2',
-      }}
-      whileTap={{
-        scale: 0.98,
-        backgroundColor: isSpecial ? undefined : '#E8E8EA',
-      }}
+      whileTap={{ scale: 0.98 }}
     >
       <div className="flex items-center">
         {isSpecial && <Sparkles className="mr-2 h-4 w-4 text-white" />}
@@ -373,4 +370,4 @@ function QuestionItem({ question, onClick, isSpecial }: QuestionItemProps) {
       </motion.div>
     </motion.button>
   );
-} 
+}

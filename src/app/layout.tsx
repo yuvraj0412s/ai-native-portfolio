@@ -30,14 +30,14 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Yuvraj Singh",
-      url: "https://yuvraj-singh.vercel.app",
+      url: "https://yuvraj.bio",
     },
   ],
   creator: "Yuvraj Singh",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yuvraj-singh.vercel.app",
+    url: "https://yuvraj.bio",
     title: "Yuvraj Singh Portfolio",
     description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
     siteName: "Yuvraj Singh Portfolio",
@@ -73,7 +73,8 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          // "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-white text-black dark:bg-black dark:text-white font-sans antialiased transition-colors duration-500 ease-in-out",
           inter.variable,
         )}
       >
