@@ -1,26 +1,47 @@
-![image](assets/readme-photo.png)
- 
-# World's first AI portfolio 🤖✨  
+![AI Portfolio Banner](assets/readme-photo.png)
 
-**Static portfolios are dead.**  
-So I built [toukoum.fr](https://toukoum.fr).
-
-Instead of making you scroll endlessly, my portfolio adapts to *you*.  
-Ask a question — my AI avatar replies instantly.
-
-## 👇 What can you ask?
-
-- 🧠 **Tech recruiter?** Ask about my stack & results  
-- 💻 **Dev?** Dive into my code & mindset  
-- 🧑‍🤝‍🧑 **Friend or family?** See what I’ve been working on  
+# 🌐 World's First AI-Native Portfolio 🤖✨  
+[![Website](https://img.shields.io/badge/Live%20Demo-yuvraj.bio-2ea44f?style=flat&logo=vercel)](https://www.yuvraj.bio)
+[![Made with Next.js](https://img.shields.io/badge/Made%20with-Next.js-black?style=flat&logo=next.js)](https://nextjs.org/)
+[![Framer Motion](https://img.shields.io/badge/Animations-Framer%20Motion-ff69b4?style=flat&logo=framer)](https://www.framer.com/motion/)
+[![OpenAI](https://img.shields.io/badge/Powered%20by-OpenAI-412991?style=flat&logo=openai)](https://openai.com/)
+[![GitHub repo size](https://img.shields.io/github/repo-size/YOUR_USERNAME/yuvi-portfolio?color=blue)]()
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
 
-This is not a portfolio.  
-It’s a **conversation tailored to your curiosity**.
+> **Static portfolios are dead.**  
+So I built **[yuvraj.bio](https://www.yuvraj.bio)** — an AI-powered portfolio that **adapts to you**.  
+Instead of making you scroll endlessly, my portfolio becomes a **conversation tailored to your curiosity**.  
 
-➡️ **Try it now:** [https://toukoum.fr](https://toukoum.fr)  
-*What will you ask?*
+---
+
+## 💡 What Makes This Special?
+- 🗣 **Interactive AI Avatar** – Ask anything, get instant answers  
+- 🧠 **Context-Aware** – Replies change based on *who’s asking*  
+- 🎨 **Dynamic UI** – Color themes adapt in real-time  
+- 🚀 **Built for Recruiters, Developers & Friends**  
+- 🔥 **No more boring "About Me" pages** — this talks *back*  
+
+---
+
+## 👇 What Can You Ask?
+- 🧑‍💼 **Tech recruiter?** → “What’s your tech stack?”  
+- 💻 **Developer?** → “Show me your code philosophy”  
+- 🧑‍🤝‍🧑 **Friend or family?** → “What have you been working on lately?”  
+
+➡️ **Try it now:** [yuvraj.bio](https://www.yuvraj.bio)  
+*What will you ask?* 💬
+
+---
+
+## 🛠 Tech Stack
+- **Frontend** → [Next.js](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/), [Framer Motion](https://www.framer.com/motion/)
+- **Backend** → Node.js, OpenAI API, GitHub API
+- **Deployment** → [Vercel](https://vercel.com/)
+- **Package Manager** → pnpm
+
+---
 
 ## 🚀 How to run
 
@@ -29,14 +50,14 @@ Want to run this project locally? Here's what you need:
 ### Prerequisites
 - **Node.js** (v18 or higher)
 - **pnpm** package manager
-- **OpenAI API token** (for AI chat functionality)
+- **Mistral API token** (for AI chat functionality)
 - **GitHub token** (for GitHub integration features)
 
 ### Setup
 1. **Clone the repository**
    ```bash
    git clone <your-repo-url>
-   cd portfolio
+   cd yuvi-portfolio
    ```
 
 2. **Install dependencies**
@@ -47,7 +68,7 @@ Want to run this project locally? Here's what you need:
 3. **Environment variables**
    Create a `.env` file in the root directory:
    ```env
-   OPENAI_API_KEY=your_openai_api_key_here
+   MISTRAL_API_KEY=your_mistral_api_key_here
    GITHUB_TOKEN=your_github_token_here
    ```
 
@@ -60,7 +81,7 @@ Want to run this project locally? Here's what you need:
    Navigate to `http://localhost:3000`
 
 ### Getting your **tokens**
-- **OpenAI API Key**: Get it from [platform.openai.com](https://platform.openai.com/api-keys)
+- **Mistral API Key**: Get it from [admin.mistral.ai](https://admin.mistral.ai/organization/api-keys)
 - **GitHub Token**: Generate one at [github.com/settings/tokens](https://github.com/settings/personal-access-tokens) with repo access
 
 
