@@ -13,8 +13,8 @@ export function Resume() {
     fileType: 'PDF',
     lastUpdated: 'July 2025',
     fileSize: '0.3 MB',
-    previewImageSrc: '/Resume_Yuvraj_Singh.png',
-    downloadUrl: '/Resume_Yuvraj_Singh.pdf',
+    previewImageSrc: '/Resume_Yuvraj_Singh_AI.png',
+    downloadUrl: '/Resume_Yuvraj_Singh_AI.pdf',
   };
 
   const handleDownload = () => {
