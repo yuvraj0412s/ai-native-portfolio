@@ -14,14 +14,14 @@
 ### **Badges**
 
 <p align="center">
-  <img src="https://img.shields.io/github/repo-size/YOUR_USERNAME/YOUR_REPO?style=for-the-badge" alt="Repo Size">
-  <img src="https://img.shields.io/github/license/YOUR_USERNAME/YOUR_REPO?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/github/repo-size/yuvraj0412s/Yuvi_portfolio?style=for-the-badge" alt="Repo Size">
+  <img src="https://img.shields.io/github/license/yuvraj0412s/Yuvi_portfolio?style=for-the-badge" alt="License">
   <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"></a>
   <a href="https://vercel.com/"><img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Deployment"></a>
   <a href="https://openai.com/"><img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI API"></a>
   <a href="https://mistral.ai/"><img src="https://img.shields.io/badge/Mistral-FF7E00?style=for-the-badge&logo=mistralai&logoColor=white" alt="Mistral API"></a>
-  <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/stargazers"><img src="https://img.shields.io/github/stars/YOUR_USERNAME/YOUR_REPO?style=for-the-badge&color=ffd700" alt="Repo Stars"></a>
-  <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/graphs/contributors"><img src="https://img.shields.io/github/contributors/YOUR_USERNAME/YOUR_REPO?style=for-the-badge&color=ff69b4" alt="Contributors"></a>
+  <a href="https://github.com/yuvraj0412s/Yuvi_portfolio/stargazers"><img src="https://img.shields.io/github/stars/yuvraj0412s/Yuvi_portfolio?style=for-the-badge&color=ffd700" alt="Repo Stars"></a>
+  <a href="https://github.com/yuvraj0412s/Yuvi_portfolio/graphs/contributors"><img src="https://img.shields.io/github/contributors/yuvraj0412s/Yuvi_portfolio?style=for-the-badge&color=ff69b4" alt="Contributors"></a>
 </p>
 
 ---
@@ -30,24 +30,23 @@
 
 Static portfolios are a thing of the past. They present a one-sided, lifeless view of a developer's journey. I decided to build **[yuvraj.bio](https://www.yuvraj.bio)** to break that mold.
 
-This project is an **AI-powered, interactive portfolio** that transforms the "About Me" page into a dynamic, engaging conversation. Instead of forcing recruiters, developers, and friends to scroll endlessly through information, it invites them to ask questions and receive answers tailored specifically to them. It’s a portfolio that doesn't just show—it communicates.
+This project is an **AI-powered, interactive portfolio** that transforms the "About Me" page into a dynamic, engaging conversation. Instead of forcing recruiters, developers, and friends to scroll endlessly through information, it invites them to ask questions and receive answers tailored specifically to them.  
+
+It’s a portfolio that doesn't just show—it communicates.
 
 ---
 
 ### **Features** ✨
 
-*   **🗣️ Interactive AI Avatar:** Engage in a real-time conversation. Ask anything from my tech stack to my hobbies and get instant, context-aware answers.
+*   **🗣️ Interactive AI Avatar:** Engage in real-time conversation. Ask anything from my tech stack to my hobbies and get instant, context-aware answers.
 *   **🧠 Context-Aware Engine:** The AI's personality and responses adapt based on who it's talking to—whether you're a recruiter, a fellow developer, or a friend.
 *   **🎨 Dynamic & Responsive UI:** A sleek, modern interface built with TailwindCSS and brought to life with Framer Motion animations.
 *   **🚀 Built for Everyone:** Crafted to provide a unique experience for tech recruiters, potential collaborators, and curious friends alike.
 *   **💬 No More Boring Bios:** This portfolio talks *back*.
 
-
 ---
 
 ### **Tech Stack** 🛠️
-
-This project is built with a modern, scalable, and efficient technology stack.
 
 | **Category**      | **Technology**                                                                                                        |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -73,8 +72,8 @@ Want to get this project running on your local machine? Follow these simple step
 
 1.  **Clone the repository:**
     ```sh
-    git clone https://github.com/yuvraj0412s/ai-native_portfolio.git
-    cd YOUR_REPO
+    git clone https://github.com/yuvraj0412s/Yuvi_portfolio.git
+    cd Yuvi_portfolio
     ```
 
 2.  **Install dependencies:**
@@ -110,7 +109,8 @@ Contributions are what make the open-source community such an amazing place to l
 4.  Push to the Branch (`git push origin feature/AmazingFeature`).
 5.  Open a **Pull Request**.
 
-Please feel free to open an issue if you find a bug or have a feature suggestion.
+Please feel free to open an issue if you find a bug or have a feature suggestion.  
+For security issues, see [SECURITY.md](SECURITY.md).
 
 ---
 
@@ -125,7 +125,7 @@ Please feel free to open an issue if you find a bug or have a feature suggestion
 
 ### **License** 📄
 
-This project is open-sourced under the **MIT License**. See the `LICENSE` file for more information.
+This project is open-sourced under the **MIT License**. See the [LICENSE](LICENSE) file for more information.
 
 ---
 
