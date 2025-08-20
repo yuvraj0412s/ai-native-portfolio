@@ -1,91 +1,159 @@
-![AI Portfolio Banner](assets/readme-photo.png)
+<div align="center">
 
-# 🌐 World's First AI-Native Portfolio 🤖✨  
-[![Website](https://img.shields.io/badge/Live%20Demo-yuvraj.bio-2ea44f?style=flat&logo=vercel)](https://www.yuvraj.bio)
-[![Made with Next.js](https://img.shields.io/badge/Made%20with-Next.js-black?style=flat&logo=next.js)](https://nextjs.org/)
-[![Framer Motion](https://img.shields.io/badge/Animations-Framer%20Motion-ff69b4?style=flat&logo=framer)](https://www.framer.com/motion/)
-[![OpenAI](https://img.shields.io/badge/Powered%20by-OpenAI-412991?style=flat&logo=openai)](https://openai.com/)
-[![GitHub repo size](https://img.shields.io/github/repo-size/YOUR_USERNAME/yuvi-portfolio?color=blue)]()
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+  <br />
+  <p>
+    <a href="https://www.yuvraj.bio"><img src="assets/readme-photo.png" alt="AI Portfolio Banner" width="100%"/></a>
+  </p>
+  <br />
 
----
-
-> **Static portfolios are dead.**  
-So I built **[yuvraj.bio](https://www.yuvraj.bio)** — an AI-powered portfolio that **adapts to you**.  
-Instead of making you scroll endlessly, my portfolio becomes a **conversation tailored to your curiosity**.  
+  <h1>🌐 World's First AI-Native Portfolio 🤖✨</h1>
+</div>
 
 ---
 
-## 💡 What Makes This Special?
-- 🗣 **Interactive AI Avatar** – Ask anything, get instant answers  
-- 🧠 **Context-Aware** – Replies change based on *who’s asking*  
-- 🎨 **Dynamic UI** – Color themes adapt in real-time  
-- 🚀 **Built for Recruiters, Developers & Friends**  
-- 🔥 **No more boring "About Me" pages** — this talks *back*  
+### **Badges**
+
+<p align="center">
+  <img src="https://img.shields.io/github/repo-size/YOUR_USERNAME/YOUR_REPO?style=for-the-badge" alt="Repo Size">
+  <img src="https://img.shields.io/github/license/YOUR_USERNAME/YOUR_REPO?style=for-the-badge" alt="License">
+  <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"></a>
+  <a href="https://vercel.com/"><img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Deployment"></a>
+  <a href="https://openai.com/"><img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI API"></a>
+  <a href="https://mistral.ai/"><img src="https://img.shields.io/badge/Mistral-FF7E00?style=for-the-badge&logo=mistralai&logoColor=white" alt="Mistral API"></a>
+  <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/stargazers"><img src="https://img.shields.io/github/stars/YOUR_USERNAME/YOUR_REPO?style=for-the-badge&color=ffd700" alt="Repo Stars"></a>
+  <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/graphs/contributors"><img src="https://img.shields.io/github/contributors/YOUR_USERNAME/YOUR_REPO?style=for-the-badge&color=ff69b4" alt="Contributors"></a>
+</p>
 
 ---
 
-## 👇 What Can You Ask?
-- 🧑‍💼 **Tech recruiter?** → “What’s your tech stack?”  
-- 💻 **Developer?** → “Show me your code philosophy”  
-- 🧑‍🤝‍🧑 **Friend or family?** → “What have you been working on lately?”  
+### **About The Project** 💡
 
-➡️ **Try it now:** [yuvraj.bio](https://www.yuvraj.bio)  
-*What will you ask?* 💬
+Static portfolios are a thing of the past. They present a one-sided, lifeless view of a developer's journey. I decided to build **[yuvraj.bio](https://www.yuvraj.bio)** to break that mold.
 
----
+This project is an **AI-powered, interactive portfolio** that transforms the "About Me" page into a dynamic, engaging conversation. Instead of forcing recruiters, developers, and friends to scroll endlessly through information, it invites them to ask questions and receive answers tailored specifically to them. It’s a portfolio that doesn't just show—it communicates.
 
-## 🛠 Tech Stack
-- **Frontend** → [Next.js](https://nextjs.org/), [TailwindCSS](https://tailwindcss.com/), [Framer Motion](https://www.framer.com/motion/)
-- **Backend** → Node.js, OpenAI API, GitHub API
-- **Deployment** → [Vercel](https://vercel.com/)
-- **Package Manager** → pnpm
+<br>
+<div align="center">
+  <img src="assets/ui-preview.gif" alt="UI Preview" width="80%"/>
+</div>
+<br>
 
 ---
 
-## 🚀 How to run
+### **Features** ✨
 
-Want to run this project locally? Here's what you need:
+*   **🗣️ Interactive AI Avatar:** Engage in a real-time conversation. Ask anything from my tech stack to my hobbies and get instant, context-aware answers.
+*   **🧠 Context-Aware Engine:** The AI's personality and responses adapt based on who it's talking to—whether you're a recruiter, a fellow developer, or a friend.
+*   **🎨 Dynamic & Responsive UI:** A sleek, modern interface built with TailwindCSS and brought to life with Framer Motion animations.
+*   **🚀 Built for Everyone:** Crafted to provide a unique experience for tech recruiters, potential collaborators, and curious friends alike.
+*   **💬 No More Boring Bios:** This portfolio talks *back*.
 
-### Prerequisites
-- **Node.js** (v18 or higher)
-- **pnpm** package manager
-- **Mistral API token** (for AI chat functionality)
-- **GitHub token** (for GitHub integration features)
+<br>
+<div align="center">
+  <img src="assets/demo.png" alt="Project Demo" width="80%"/>
+</div>
+<br>
 
-### Setup
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd yuvi-portfolio
-   ```
+---
 
-2. **Install dependencies**
-   ```bash
-   pnpm install
-   ```
+### **Tech Stack** 🛠️
 
-3. **Environment variables**
-   Create a `.env` file in the root directory:
-   ```env
-   MISTRAL_API_KEY=your_mistral_api_key_here
-   GITHUB_TOKEN=your_github_token_here
-   ```
+This project is built with a modern, scalable, and efficient technology stack.
 
-4. **Run the development server**
-   ```bash
-   pnpm dev
-   ```
+| **Category**      | **Technology**                                                                                                        |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **Frontend**      | [Next.js](https://nextjs.org/), [React](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Framer Motion](https://www.framer.com/motion/) |
+| **Backend**       | [Node.js](https://nodejs.org/), Next.js API Routes                                                                     |
+| **AI & APIs**     | [OpenAI API](https://openai.com/), [Mistral API](https://mistral.ai/), [GitHub API](https://docs.github.com/en/rest)      |
+| **Deployment**    | [Vercel](https://vercel.com/)                                                                                         |
+| **Package Manager**| [pnpm](https://pnpm.io/)                                                                                              |
 
-5. **Open your browser**
-   Navigate to `http://localhost:3000`
+---
 
-### Getting your **tokens**
-- **Mistral API Key**: Get it from [admin.mistral.ai](https://admin.mistral.ai/organization/api-keys)
-- **GitHub Token**: Generate one at [github.com/settings/tokens](https://github.com/settings/personal-access-tokens) with repo access
+### **Installation & Usage** 🚀
 
+Want to get this project running on your local machine? Follow these simple steps.
 
+#### **Prerequisites**
+-   Node.js (v18 or higher)
+-   pnpm package manager
+-   Mistral API Token
+-   GitHub API Token
 
-#### 🔖 Tags
+#### **Local Setup**
 
-`#AIPortfolio` `#InnovationInTech` `#DigitalResume` `#JobSearch` `#TechInnovation` `#WebDevelopment` `#FutureTech`
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/yuvraj0412s/Yuvi_portfolio.git
+    cd YOUR_REPO
+    ```
+
+2.  **Install dependencies:**
+    ```sh
+    pnpm install
+    ```
+
+3.  **Set up your environment variables:**
+    Create a `.env.local` file in the root of your project and add the following keys:
+    ```env
+    MISTRAL_API_KEY="your_mistral_api_key_here"
+    GITHUB_TOKEN="your_github_token_here"
+    ```
+    *   Get your Mistral API Key from [admin.mistral.ai](https://admin.mistral.ai/organization/api-keys).
+    *   Generate your GitHub Token at [github.com/settings/tokens](https://github.com/settings/personal-access-tokens).
+
+4.  **Run the development server:**
+    ```sh
+    pnpm dev
+    ```
+
+5.  **Open your browser** and navigate to `http://localhost:3000`.
+
+---
+
+### **Contributing** 🤝
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1.  **Fork** the Project.
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
+4.  Push to the Branch (`git push origin feature/AmazingFeature`).
+5.  Open a **Pull Request**.
+
+Please feel free to open an issue if you find a bug or have a feature suggestion.
+
+---
+
+### **Roadmap** 🗺️
+
+-   [ ] Add more AI personality "modes"
+-   [ ] Integrate a project showcase with live demos
+-   [ ] Implement a light/dark theme toggle
+-   [ ] Add multilingual support for the AI chat
+
+---
+
+### **License** 📄
+
+This project is open-sourced under the **MIT License**. See the `LICENSE` file for more information.
+
+---
+
+### **Contact & Links** 🔗
+
+**Yuvraj Singh** - Let's connect!
+
+<div align="center">
+
+[![Portfolio](https://img.shields.io/badge/Live_Demo-yuvraj.bio-2ea44f?style=for-the-badge&logo=vercel)](https://www.yuvraj.bio)
+&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yuvraj-singh-77601827a/)
+
+</div>
+
+---
+
+### **Tags**
+
+`#AIPortfolio` `#NextJS` `#React` `#Portfolio` `#Vercel` `#OpenAI` `#MistralAI` `#DeveloperPortfolio` `#WebDevelopment` `#InteractiveUI`
