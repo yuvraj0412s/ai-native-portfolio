@@ -97,11 +97,11 @@ export default function Home() {
       <div className="absolute top-6 right-8 z-20 flex items-center gap-2">
         <ThemeToggle />
         <GithubButton
-          //targetStars={68}
+          //targetStars={69}
           animationDuration={1.5}
           label="Star"
           size={'sm'}
-          repoUrl="https://github.com/yuvraj0412s"
+          repoUrl="https://github.com/yuvraj0412s/ai-native_portfolio.git"
         />
       </div>
 

@@ -73,7 +73,7 @@ Want to get this project running on your local machine? Follow these simple step
 
 1.  **Clone the repository:**
     ```sh
-    git clone https://github.com/yuvraj0412s/Yuvi_portfolio.git
+    git clone https://github.com/yuvraj0412s/ai-native_portfolio.git
     cd YOUR_REPO
     ```
 
