@@ -32,12 +32,6 @@ Static portfolios are a thing of the past. They present a one-sided, lifeless vi
 
 This project is an **AI-powered, interactive portfolio** that transforms the "About Me" page into a dynamic, engaging conversation. Instead of forcing recruiters, developers, and friends to scroll endlessly through information, it invites them to ask questions and receive answers tailored specifically to them. It’s a portfolio that doesn't just show—it communicates.
 
-<br>
-<div align="center">
-  <img src="assets/ui-preview.gif" alt="UI Preview" width="80%"/>
-</div>
-<br>
-
 ---
 
 ### **Features** ✨
@@ -48,11 +42,6 @@ This project is an **AI-powered, interactive portfolio** that transforms the "Ab
 *   **🚀 Built for Everyone:** Crafted to provide a unique experience for tech recruiters, potential collaborators, and curious friends alike.
 *   **💬 No More Boring Bios:** This portfolio talks *back*.
 
-<br>
-<div align="center">
-  <img src="assets/demo.png" alt="Project Demo" width="80%"/>
-</div>
-<br>
 
 ---
 
