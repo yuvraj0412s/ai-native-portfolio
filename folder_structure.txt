@@ -4,6 +4,7 @@
 ├── components.json
 ├── eslint.config.mjs
 ├── folder_structure.txt
+├── LICENSE
 ├── next-env.d.ts
 ├── next.config.ts
 ├── package.json
@@ -11,68 +12,16 @@
 ├── postcss.config.mjs
 ├── public
 │   ├── avatar-landing.png
-│   ├── avatar-raphael.jpg
-│   ├── blancmont.JPG
-│   ├── datai1.png
-│   ├── datai2.png
-│   ├── datai3.png
-│   ├── datai4.png
-│   ├── dataipreview.png
-│   ├── defai1.png
-│   ├── defai2.png
-│   ├── defai3.png
-│   ├── defai4.jpeg
-│   ├── defaipreview.png
 │   ├── favicon.svg
 │   ├── final_memojis_ios.mp4
 │   ├── final_memojis.webm
-│   ├── fitgear1.png
-│   ├── fitgear2.png
-│   ├── fitgearpreview.png
-│   ├── gueret.jpg
 │   ├── landing-memojis.png
-│   ├── levens.JPG
 │   ├── logo-yuvi.svg
-│   ├── marseille.JPG
-│   ├── minishell1.png
-│   ├── minishellpreview.png
-│   ├── oldport1.png
-│   ├── oldport2.png
-│   ├── oldportfoliopreview.png
 │   ├── Plant_disease_detectionwebsite.png
-│   ├── ploeuc.jpg
-│   ├── podium.jpg
-│   ├── profile-yuvi-01.jpeg
-│   ├── profile-yuvi-02.jpeg
 │   ├── profile-yuvi-03.jpeg
 │   ├── profile-yuvi.jpg
-│   ├── ratepreview.png
-│   ├── resume_giraud_preview.png
-│   ├── resume_giraud.pdf
 │   ├── Resume_Yuvraj_Singh_AI.pdf
-│   ├── Resume_Yuvraj_Singh_AI.png
-│   ├── rrate1.png
-│   ├── rrate2.png
-│   ├── rrate3.png
-│   ├── synto1.png
-│   ├── synto2.png
-│   ├── synto3.png
-│   ├── synto4.png
-│   ├── synto5.png
-│   ├── synto6.png
-│   ├── syntopreview.png
-│   ├── trans1.png
-│   ├── trans2.png
-│   ├── trans3.png
-│   ├── trans4.png
-│   ├── trans5.png
-│   ├── trans6.png
-│   ├── transcendancepreview.png
-│   ├── transmo.JPG
-│   ├── x.svg
-│   ├── youbot1.jpg
-│   ├── youbot2.png
-│   └── youbotpreview.png
+│   └── Resume_Yuvraj_Singh_AI.png
 ├── README.md
 ├── SETUP_INSTRUCTIONS.md
 ├── src
@@ -106,4 +55,4 @@
 │       └── utils.ts
 └── tsconfig.json
 
-14 directories, 93 files
+14 directories, 42 files
