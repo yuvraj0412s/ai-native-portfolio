@@ -82,8 +82,8 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              (window as any).dataLayer = (window as any).dataLayer || [];
-              function gtag(){(window as any).dataLayer.push(arguments);}
+              window['dataLayer'] = window['dataLayer'] || [];
+              function gtag(){window['dataLayer'].push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-QTH2CN2YRQ');
             `,
