@@ -29,7 +29,7 @@ When reporting, please include:
 - **Title:** e.g., `Cross-Site Scripting (XSS) in Chat Component`  
 - **Description:** Explain the potential impact of the vulnerability.  
 - **Steps to Reproduce:** A clear, step-by-step guide.  
-- **Proof of Concept (PoC):** Code snippets, screenshots, or demo.  
+- **Proof of Concept (PoC):** Code snippets, Screenshots, or demo.  
 - **Environment Details:** Browser, OS, project version, etc.  
 
 ✅ You will receive an acknowledgment within **48 hours**, and we will provide regular updates until the issue is resolved.

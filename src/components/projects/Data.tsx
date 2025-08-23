@@ -1,35 +1,198 @@
+// File: data.tsx
+
 import Image from 'next/image';
-import { Image as Img } from 'lucide-react';
 import { ChevronRight, Link } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
-import { url } from 'inspector';
 
-// Enhanced project content array with all projects
+// --- PROJECT DATABASE ---
+// This array holds the detailed information for each project.
 const PROJECT_CONTENT = [
-  {
-    title: 'Plant Disease Detection',
+    {
+    // --- NEW AI-NATIVE PORTFOLIO PROJECT ---
+    title: 'AI-Native Portfolio',
     description:
-      'Built structured dataset pipelines with preprocessing, TensorFlow, EfficientNetB4, and Flask to detect plant diseases from leaf images using transfer learning, delivering detailed predictions including symptoms, causes, and treatments. Achieved 96% classification accuracy across 38 disease classes on the PlantVillage dataset, demonstrating effective transfer learning and supporting early intervention in precision agriculture.',
+      'Static portfolios are boring. Mine talks back. The world’s first AI-native portfolio where an AI avatar answers your questions about me in real time.',
     techStack: [
-      'TensorFlow',
-      'EfficientNetB4',
-      'Flask',
-      'Python',
-      'Machine Learning',
-      'Data Preprocessing',
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Framer Motion',
+      'Mistral AI API',
+      'OpenAI API',
+      'Node.js',
+      'Vercel',
     ],
-    date: 'Feb 2024 - May 2024',
+    date: 'August 2025', // <-- TODO: Update with your project date
     links: [
       {
+        name: 'Live Demo - You Are Here!',
+        url: 'https://www.yuvraj.bio',
+      },
+      {
         name: 'GitHub Repository',
-        url: 'https://github.com/yuvraj0412s/Plant-Disease-Detection-System',
+        url: 'https://github.com/yuvraj0412s/ai-native-portfolio',
       },
     ],
     images: [
+      { src: '/Projects/ai-portfolio-chat.png', alt: 'The AI Native Portfolio chat interface in action' },
+      { src: '/Projects/ai-portfolio-home.png', alt: 'Homepage of the AI Native Portfolio' },
+    ],
+  },
+  {
+    title: 'AgroAI',
+    description:
+      'Snap a leaf, get a diagnosis! This AI-powered web app detects 38 plant diseases with 96% accuracy and gives instant tips on symptoms, causes, and treatment—making plant care smarter and easier for farmers and gardeners.',
+    techStack: [
+      'Python',
+      'Flask',
+      'TensorFlow',
+      'Keras',
+      'Deep Learning',
+      'Computer Vision',
+      'EfficientNetB4',
+      'HTML5',
+      'CSS3',
+      'JavaScript',
+    ],
+    date: 'May 2024',
+    links: [
       {
-        src: '/Plant_disease_detectionwebsite.png',
-        alt: 'Plant Disease Detection project website screenshot',
+        name: 'Live Demo',
+        url: 'https://github.com/yuvraj0412s/AgroAI', // <-- TODO: Replace with your live deployment URL.... will do later
       },
+      {
+        name: 'GitHub Repository',
+        url: 'https://github.com/yuvraj0412s/AgroAI', // <-- TODO: Replace with your actual repo URL if different
+      },
+    ],
+    // All seven of screenshots are showcased here
+    images: [
+      {
+        src: '/Projects/agroai-home.png',
+        alt: 'AgroAI Homepage - AI-Powered Plant Health Companion',
+      },
+      {
+        src: '/Projects/agroai-result.png',
+        alt: 'AgroAI Analysis Result Page with Prediction and Confidence Score',
+      },
+      {
+        src: '/Projects/agroai-guide.png',
+        alt: 'AgroAI Crop-wise Disease Guides Page',
+      },
+      {
+        src: '/Projects/agroai-guide-detail.png',
+        alt: 'AgroAI Tomato Disease Guide Detail Page with Accordion',
+      },
+      {
+        src: '/Projects/agroai-how-it-works.png',
+        alt: 'AgroAI How It Works Page with a 3-step flowchart',
+      },
+      {
+        src: '/Projects/agroai-resources.png',
+        alt: 'AgroAI Farming & Plant Care Resources Page',
+      },
+      {
+        src: '/Projects/agroai-about.png',
+        alt: 'AgroAI About and Contact Page',
+      },
+    ],
+  },
+  {
+    // --- NEW DJANGO E-COMMERCE PROJECT ---
+    title: 'Holohype',
+    description:
+      'HoloHype is a quirky full-stack e-commerce hub with a clever AI that knows what you want, a lightning-fast cart, secure logins, and a super-handy admin panel to keep all the goodies in check.',
+    techStack: [
+      'Django',
+      'Python',
+      'Cython',
+      'Content-Based Filtering',
+      'NumPy',
+      'Pandas',
+      'JavaScript',
+      'AJAX',
+      'HTML5',
+      'CSS3',
+    ],
+    date: 'September 2024', // <-- TODO: Update with your project date
+    links: [
+      {
+        name: 'Live Demo',
+        url: 'https://github.com/yuvraj0412s/holohype', // <-- TODO: Replace with your live deployment URL
+      },
+      {
+        name: 'GitHub Repository',
+        url: 'https://github.com/yuvraj0412s/holohype', // <-- TODO: Update with your actual repo URL
+      },
+    ],
+    images: [
+      { src: '/Projects/holohype-home.png', alt: 'E-commerce platform homepage with product listings' },
+      { src: '/Projects/holohype-login.png', alt: 'Modern user login and authentication page' },
+      { src: '/Projects/holohype-product.png', alt: 'Product detail page with AI-powered recommendations' },
+      { src: '/Projects/holohype-cart.png', alt: 'Dynamic shopping cart with real-time updates' },
+    ],
+  },
+  {
+    // --- NEW REACT PORTFOLIO PROJECT ---
+    title: 'Old Portfolio',
+    description:
+      'A stellar dev portfolio with shooting stars on a dark space background! Built with React, Vite & Tailwind, it features sleek animations, dark/light mode, a filterable skills grid, dynamic project showcase, and a working contact form. A cosmic way to show off my frontend skills!',
+    techStack: [
+      'React',
+      'Vite',
+      'Tailwind CSS',
+      'Radix UI',
+      'Lucide Icons',
+      'TypeScript',
+      'Responsive Design',
+    ],
+    date: '2024', // <-- TODO: Update with your project date
+    links: [
+      {
+        name: 'Live Demo',
+        url: 'https://yuvraj-portfolio-phi.vercel.app', // <-- TODO: Update if this is the correct link
+      },
+      {
+        name: 'GitHub Repository',
+        url: 'https://github.com/yuvraj0412s/react-tailwind-portfolio', // <-- TODO: Update with your actual repo URL
+      },
+    ],
+    images: [
+      { src: '/Projects/old-portfolio-home.png', alt: 'Homepage of the React portfolio with hero section' },
+      { src: '/Projects/old-portfolio-about.png', alt: 'About Me section with description' },
+      { src: '/Projects/old-portfolio-skills.png', alt: 'Filterable skills grid with progress bars' },
+      { src: '/Projects/old-portfolio-projects.png', alt: 'Project showcase section with cards' },
+      { src: '/Projects/old-portfolio-contact.png', alt: 'Contact page with form to reach out directly' },
+    ],
+  },
+  {
+    // --- YOUTUBE CLONE PROJECT (FROM YOUR README) ---
+    title: 'YouTube Clone',
+    description:
+      'A pixel-perfect, responsive clone of the YouTube user interface, built from scratch using modern HTML5 and CSS3. The project showcases a deep understanding of frontend fundamentals, featuring a dynamic video grid built with CSS Grid, a fully responsive sidebar and header created with Flexbox, and a mobile-first design approach that ensures a seamless experience on any device.',
+    techStack: [
+      'HTML5',
+      'CSS3',
+      'Flexbox',
+      'CSS Grid',
+      'Responsive Design',
+      'Mobile-First',
+    ],
+    date: '2023', // <-- TODO: Update with your project date
+    links: [
+      {
+        name: 'Live Demo',
+        url: 'https://github.com/yuvraj0412s/YouTube_clone', // <-- TODO: Replace with your live deployment URL
+      },
+      {
+        name: 'GitHub Repository',
+        url: 'https://github.com/yuvraj0412s/YouTube_clone', // <-- TODO: Update if your repo name is different
+      },
+    ],
+    images: [
+      { src: '/Projects/yt-clone-home.png', alt: 'Screenshot of the YouTube Clone project homepage' },
+      // Add more screenshots here if you have them!
     ],
   },
   {
@@ -46,24 +209,22 @@ const PROJECT_CONTENT = [
     links: [],
     images: [
       {
-        src: '/latency1.png', // Placeholder image
+        src: '/Projects/RP_preview.png', // Placeholder image
         alt: 'Latency-Aware Task Partitioning project image 1',
       },
     ],
   },
 ];
+
+// --- COMPONENT & INTERFACE DEFINITIONS ---
 // Define interface for project prop
 interface ProjectProps {
   title: string;
-  description?: string;
-  techStack?: string[];
-  date?: string;
-  links?: { name: string; url: string }[];
-  images?: { src: string; alt: string }[];
 }
 
+// This component dynamically renders the project details
 const ProjectContent = ({ project }: { project: ProjectProps }) => {
-  // Find the matching project data
+  // Find the matching project data from the database
   const projectData = PROJECT_CONTENT.find((p) => p.title === project.title);
 
   if (!projectData) {
@@ -114,16 +275,16 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
           <Separator className="my-4" />
           <div className="space-y-3">
             {projectData.links.map((link, index) => (
-                <a
+              <a
                 key={index}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-[#F5F5F7] flex items-center justify-between rounded-xl p-4 transition-colors hover:bg-[#E5E5E7] dark:bg-neutral-800 dark:hover:bg-neutral-700"
-                >
+              >
                 <span className="font-light capitalize">{link.name}</span>
                 <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
+              </a>
             ))}
           </div>
         </div>
@@ -153,18 +314,54 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
   );
 };
 
-// Main data export with updated content
+// --- MAIN DATA EXPORT ---
+// This is the data used by your main portfolio page.
 export const data = [
+   {
+    category: 'AI & Next.js',
+    title: 'AI-Native Portfolio',
+    src: '/Projects/ai-portfolio-preview.png', // <-- TODO: Make sure you have a preview image at this path
+    content: (
+      // The `title` here MUST match the full title in PROJECT_CONTENT
+      <ProjectContent project={{ title: 'AI-Native Portfolio' }} />
+    ),
+  },
   {
-    category: 'Machine Learning',
-    title: 'Plant Disease Detection',
-    src: '/Plant_disease_detectionwebsite.png', // Using the same image for preview
-    content: <ProjectContent project={{ title: 'Plant Disease Detection' }} />,
+    category: 'Full-Stack AI',
+    title: 'AgroAI',
+    src: '/Projects/agroai-preview.png', // Use the main homepage screenshot for the preview
+    content: (
+      <ProjectContent project={{ title: 'AgroAI' }} />
+    ),
+  },
+  {
+    category: 'Full-Stack & AI',
+    title: 'Holohype',
+    src: '/Projects/holohype-preview.png', // <-- TODO: Make sure you have a preview image at this path
+    content: (
+      <ProjectContent project={{ title: 'Holohype' }} />
+    ),
+  },
+  {
+    category: 'Frontend Development',
+    title: 'Old Portfolio',
+    src: '/Projects/old-portfolio-preview.png', // <-- TODO: Make sure you have a preview image at this path
+    content: (
+      <ProjectContent project={{ title: 'Old Portfolio' }} />
+    ),
+  },
+  {
+    category: 'Frontend Development',
+    title: 'YouTube Clone',
+    src: '/Projects/yt-clone-preview.png', // <-- TODO: Make sure you have a preview image at this path
+    content: (
+      <ProjectContent project={{ title: 'YouTube Clone' }} />
+    ),
   },
   {
     category: 'Edge Computing',
     title: 'Latency-Aware Task Partitioning',
-    src: '/latency-preview.png', // Placeholder image
+    src: '/Projects/RP_preview.png', // Placeholder image
     content: (
       <ProjectContent project={{ title: 'Latency-Aware Task Partitioning' }} />
     ),

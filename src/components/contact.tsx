@@ -91,7 +91,7 @@ export function Contact() {
         <div className="bg-accent rounded-lg p-6">
           <h3 className="font-semibold mb-2">What I'm Looking For</h3>
           <p className="text-sm text-muted-foreground">
-            • Data Science & AI opportunities • Machine Learning projects • Full-stack development roles • 
+            • Data Science & AI opportunities • AI Automation projects • Full-stack development roles • 
             Open source contributions • Tech community connections
           </p>
         </div>
