@@ -35,8 +35,8 @@ const PROJECT_CONTENT = [
       },
     ],
     images: [
-      { src: '/Projects/ai-portfolio-chat.png', alt: 'The AI Native Portfolio chat interface in action' },
-      { src: '/Projects/ai-portfolio-home.png', alt: 'Homepage of the AI Native Portfolio' },
+      { src: '/projects/ai-portfolio-chat.png', alt: 'The AI Native Portfolio chat interface in action' },
+      { src: '/projects/ai-portfolio-home.png', alt: 'Homepage of the AI Native Portfolio' },
     ],
   },
   {
@@ -69,31 +69,31 @@ const PROJECT_CONTENT = [
     // All seven of screenshots are showcased here
     images: [
       {
-        src: '/Projects/agroai-home.png',
+        src: '/projects/agroai-home.png',
         alt: 'AgroAI Homepage - AI-Powered Plant Health Companion',
       },
       {
-        src: '/Projects/agroai-result.png',
+        src: '/projects/agroai-result.png',
         alt: 'AgroAI Analysis Result Page with Prediction and Confidence Score',
       },
       {
-        src: '/Projects/agroai-guide.png',
+        src: '/projects/agroai-guide.png',
         alt: 'AgroAI Crop-wise Disease Guides Page',
       },
       {
-        src: '/Projects/agroai-guide-detail.png',
+        src: '/projects/agroai-guide-detail.png',
         alt: 'AgroAI Tomato Disease Guide Detail Page with Accordion',
       },
       {
-        src: '/Projects/agroai-how-it-works.png',
+        src: '/projects/agroai-how-it-works.png',
         alt: 'AgroAI How It Works Page with a 3-step flowchart',
       },
       {
-        src: '/Projects/agroai-resources.png',
+        src: '/projects/agroai-resources.png',
         alt: 'AgroAI Farming & Plant Care Resources Page',
       },
       {
-        src: '/Projects/agroai-about.png',
+        src: '/projects/agroai-about.png',
         alt: 'AgroAI About and Contact Page',
       },
     ],
@@ -127,10 +127,10 @@ const PROJECT_CONTENT = [
       },
     ],
     images: [
-      { src: '/Projects/holohype-home.png', alt: 'E-commerce platform homepage with product listings' },
-      { src: '/Projects/holohype-login.png', alt: 'Modern user login and authentication page' },
-      { src: '/Projects/holohype-product.png', alt: 'Product detail page with AI-powered recommendations' },
-      { src: '/Projects/holohype-cart.png', alt: 'Dynamic shopping cart with real-time updates' },
+      { src: '/projects/holohype-home.png', alt: 'E-commerce platform homepage with product listings' },
+      { src: '/projects/holohype-login.png', alt: 'Modern user login and authentication page' },
+      { src: '/projects/holohype-product.png', alt: 'Product detail page with AI-powered recommendations' },
+      { src: '/projects/holohype-cart.png', alt: 'Dynamic shopping cart with real-time updates' },
     ],
   },
   {
@@ -159,11 +159,11 @@ const PROJECT_CONTENT = [
       },
     ],
     images: [
-      { src: '/Projects/old-portfolio-home.png', alt: 'Homepage of the React portfolio with hero section' },
-      { src: '/Projects/old-portfolio-about.png', alt: 'About Me section with description' },
-      { src: '/Projects/old-portfolio-skills.png', alt: 'Filterable skills grid with progress bars' },
-      { src: '/Projects/old-portfolio-projects.png', alt: 'Project showcase section with cards' },
-      { src: '/Projects/old-portfolio-contact.png', alt: 'Contact page with form to reach out directly' },
+      { src: '/projects/old-portfolio-home.png', alt: 'Homepage of the React portfolio with hero section' },
+      { src: '/projects/old-portfolio-about.png', alt: 'About Me section with description' },
+      { src: '/projects/old-portfolio-skills.png', alt: 'Filterable skills grid with progress bars' },
+      { src: '/projects/old-portfolio-projects.png', alt: 'Project showcase section with cards' },
+      { src: '/projects/old-portfolio-contact.png', alt: 'Contact page with form to reach out directly' },
     ],
   },
   {
@@ -191,7 +191,7 @@ const PROJECT_CONTENT = [
       },
     ],
     images: [
-      { src: '/Projects/yt-clone-home.png', alt: 'Screenshot of the YouTube Clone project homepage' },
+      { src: '/projects/yt-clone-home.png', alt: 'Screenshot of the YouTube Clone project homepage' },
       // Add more screenshots here if you have them!
     ],
   },
@@ -209,7 +209,7 @@ const PROJECT_CONTENT = [
     links: [],
     images: [
       {
-        src: '/Projects/RP_preview.png', // Placeholder image
+        src: '/projects/RP_preview.png', // Placeholder image
         alt: 'Latency-Aware Task Partitioning project image 1',
       },
     ],
@@ -320,7 +320,7 @@ export const data = [
    {
     category: 'AI & Next.js',
     title: 'AI-Native Portfolio',
-    src: '/Projects/ai-portfolio-preview.png', // <-- TODO: Make sure you have a preview image at this path
+    src: '/projects/ai-portfolio-preview.png', // <-- TODO: Make sure you have a preview image at this path
     content: (
       // The `title` here MUST match the full title in PROJECT_CONTENT
       <ProjectContent project={{ title: 'AI-Native Portfolio' }} />
@@ -329,7 +329,7 @@ export const data = [
   {
     category: 'Full-Stack AI',
     title: 'AgroAI',
-    src: '/Projects/agroai-preview.png', // Use the main homepage screenshot for the preview
+    src: '/projects/agroai-preview.png', // Use the main homepage screenshot for the preview
     content: (
       <ProjectContent project={{ title: 'AgroAI' }} />
     ),
@@ -337,7 +337,7 @@ export const data = [
   {
     category: 'Full-Stack & AI',
     title: 'Holohype',
-    src: '/Projects/holohype-preview.png', // <-- TODO: Make sure you have a preview image at this path
+    src: '/projects/holohype-preview.png', // <-- TODO: Make sure you have a preview image at this path
     content: (
       <ProjectContent project={{ title: 'Holohype' }} />
     ),
@@ -345,7 +345,7 @@ export const data = [
   {
     category: 'Frontend Development',
     title: 'Old Portfolio',
-    src: '/Projects/old-portfolio-preview.png', // <-- TODO: Make sure you have a preview image at this path
+    src: '/projects/old-portfolio-preview.png', // <-- TODO: Make sure you have a preview image at this path
     content: (
       <ProjectContent project={{ title: 'Old Portfolio' }} />
     ),
@@ -353,7 +353,7 @@ export const data = [
   {
     category: 'Frontend Development',
     title: 'YouTube Clone',
-    src: '/Projects/yt-clone-preview.png', // <-- TODO: Make sure you have a preview image at this path
+    src: '/projects/yt-clone-preview.png', // <-- TODO: Make sure you have a preview image at this path
     content: (
       <ProjectContent project={{ title: 'YouTube Clone' }} />
     ),
@@ -361,7 +361,7 @@ export const data = [
   {
     category: 'Edge Computing',
     title: 'Latency-Aware Task Partitioning',
-    src: '/Projects/RP_preview.png', // Placeholder image
+    src: '/projects/RP_preview.png', // Placeholder image
     content: (
       <ProjectContent project={{ title: 'Latency-Aware Task Partitioning' }} />
     ),
