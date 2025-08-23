@@ -115,7 +115,7 @@ const PROJECT_CONTENT = [
       'HTML5',
       'CSS3',
     ],
-    date: 'September 2024', // <-- TODO: Update with your project date
+    date: 'June 2025', // <-- TODO: Update with your project date
     links: [
       {
         name: 'Live Demo',
