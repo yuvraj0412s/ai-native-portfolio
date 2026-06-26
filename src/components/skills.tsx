@@ -35,7 +35,7 @@ const Skills = () => {
         'Scikit-learn',
         'PyTorch',
         'Keras',
-        'OpenAI API',
+        'Mistral AI API',
         'Hugging Face Transformers',
         'LangChain',
         'Streamlit',
