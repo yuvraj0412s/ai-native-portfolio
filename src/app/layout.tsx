@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import SpotifyWidget from "@/components/SpotifyWidget";
 import Script from "next/script";
 import "./globals.css";
 
@@ -105,6 +106,7 @@ export default function RootLayout({
           <main className="flex min-h-screen flex-col">
             {children}
           </main>
+          <SpotifyWidget />
           <Toaster />
         </ThemeProvider>
         <Analytics />
