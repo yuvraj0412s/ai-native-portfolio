@@ -110,7 +110,7 @@ Contributions are what make the open-source community such an amazing place to l
 5.  Open a **Pull Request**.
 
 Please feel free to open an issue if you find a bug or have a feature suggestion.  
-For security issues, see [SECURITY.md](SECURITY.md).
+For security issues, see [SECURITY.md](.github/SECURITY.md).
 
 ---
 
