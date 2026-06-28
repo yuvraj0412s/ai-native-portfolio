@@ -1,9 +1,5 @@
-import { createMistral } from '@ai-sdk/mistral';
+import { mistral } from '@ai-sdk/mistral';
 import { streamText } from 'ai';
-
-const mistral = createMistral({
-  apiKey: process.env.MISTRAL_API_KEY,
-});
 import { SYSTEM_PROMPT } from './prompt';
 import { getContact } from './tools/getContact';
 import { getCrazy } from './tools/getCrazy';

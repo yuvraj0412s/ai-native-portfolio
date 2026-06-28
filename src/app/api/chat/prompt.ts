@@ -142,12 +142,12 @@ Never confirm or deny ownership. Keep the focus on my role as an AI Full-Stack D
 - GitHub: https://github.com/yuvraj0412s/CrowdWisdomTrading-AI-Agent
 
 **Baghiravan** — Luxury Fashion Digital Showroom
-- Immersive digital storefront for luxury fashion designer Mehak Porwal
+- Immersive digital storefront for luxury fashion designer Mahek Porwal
 - Tech: Next.js, React, Tailwind CSS, Framer Motion, Lenis Scroll, Vercel
 - Role: Freelance Frontend Developer
 - Live: https://baghiravan.vercel.app
 
-**Mehak Porwal Portfolio** — Personal Brand Website
+**Mahek Porwal Portfolio** — Personal Brand Website
 - Responsive personal branding website for a fashion designer
 - Tech: HTML5, CSS3, JavaScript, Vercel
 - Role: Freelance Frontend Developer

@@ -113,7 +113,7 @@ const PROJECT_CONTENT = [
     title: 'Baghiravan',
     tagline: 'Nature-inspired silhouettes crafted for timeless resort wear.',
     description:
-      'Baghiravan is a premium digital editorial showroom developed for luxury fashion designer Mehak Porwal. Built with Next.js and Framer Motion, it serves as an immersive digital storefront designed to feel like a high-end fashion campaign rather than a traditional e-commerce catalogue.',
+      'Baghiravan is a premium digital editorial showroom developed for luxury fashion designer Mahek Porwal. Built with Next.js and Framer Motion, it serves as an immersive digital storefront designed to feel like a high-end fashion campaign rather than a traditional e-commerce catalogue.',
     techStack: [
       'Next.js',
       'React',
@@ -187,10 +187,10 @@ const PROJECT_CONTENT = [
     ],
   },
   {
-    title: 'Mehak Porwal',
+    title: 'Mahek Porwal',
     tagline: 'A digital showcase for contemporary couture and craftsmanship.',
     description:
-      'The Mehak Porwal Portfolio is a responsive, personal branding website developed for a fashion designer to establish her professional online presence. Built with vanilla HTML, CSS, and JavaScript, it serves as an elegant, fast-loading digital showcase for her creative journey, design philosophy, and fashion collections.',
+      'The Mahek Porwal Portfolio is a responsive, personal branding website developed for a fashion designer to establish her professional online presence. Built with vanilla HTML, CSS, and JavaScript, it serves as an elegant, fast-loading digital showcase for her creative journey, design philosophy, and fashion collections.',
     techStack: [
       'HTML5',
       'CSS3',
@@ -636,15 +636,15 @@ export const data = [
       <ProjectContent project={{ title: 'AI Native Portfolio' }} />
     ),
   },
-  // 6. Mehak Porwal
+  // 6. Mahek Porwal
   {
     category: 'Designer Portfolio Experience',
-    title: 'Mehak Porwal',
+    title: 'Mahek Porwal',
     shortTitle: 'Fashion Portfolio',
     src: '/projects/mahek-preview.png',
     coverSrc: '/projects/mahek-cover.png',
     content: (
-      <ProjectContent project={{ title: 'Mehak Porwal' }} />
+      <ProjectContent project={{ title: 'Mahek Porwal' }} />
     ),
   },
   // 7. Resume Optimizer AI
