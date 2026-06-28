@@ -18,7 +18,9 @@ import React, {
 
 type Card = {
   src: string;
+  coverSrc?: string;
   title: string;
+  shortTitle?: string;
   category: string;
   content: React.ReactNode;
 };
@@ -285,11 +287,11 @@ export const Card = ({
             layoutId={layout ? `title-${card.title}` : undefined}
             className="max-w-xs text-left font-sans text-xl font-semibold [text-wrap:balance] text-white md:text-3xl"
           >
-            {card.title}
+            {card.shortTitle || card.title}
           </motion.p>
         </div>
         <BlurImage
-          src={card.src}
+          src={card.coverSrc || card.src}
           alt={card.title}
           fill
           className="absolute inset-0 z-10 object-cover"

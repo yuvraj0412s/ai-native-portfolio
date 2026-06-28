@@ -3,21 +3,22 @@ import { z } from 'zod';
 
 export const getInternship = tool({
   description:
-    "Gives a summary of what kind of internship I'm looking for, plus my contact info and how to reach me. Use this tool when the user asks about my internship search or how to contact me for opportunities.",
+    "Shows a summary of the kind of full-time engineering role I'm looking for, my availability, tech stack, and contact info. Use this tool when the user asks about my job search, whether I'm open to opportunities, or how to hire or contact me.",
   parameters: z.object({}),
   execute: async () => {
-    return `Here’s what I’m looking for 👇
+    return `Here's what I'm looking for 👇
 
-- 📅 **Availability**: Open to immediate opportunities
-- 🌍 **Location**: Preferably **Gurugram** or anywhere in the **India**
-- 🧑‍💻 **Focus**: Data Science, AI/ML, Full-stack development
-- 🛠️ **Stack**: Python, React, SQL, TensorFlow, Power BI, Tableau
-- ✅ **What I bring**: Experience in building data-driven dashboards, optimizing data pipelines, and developing end-to-end analytics projects. Proven ability to translate raw data into actionable business insights.
-- 🔥 I move fast, learn faster, and I’m HUNGRYYYYY for big challenges
+- 💼 **Role**: AI Full-Stack Developer / AI Engineer (Full-Time)
+- 📅 **Availability**: Immediately available
+- 🌍 **Location**: Gurugram, India · Remote-friendly · Open to relocation
+- 🧑‍💻 **Focus**: AI Engineering, Full-Stack Development, SaaS Products, Intelligent Automation
+- 🛠️ **Stack**: Python, TypeScript, React, Next.js, FastAPI, Node.js, OpenAI, RAG, CrewAI, PostgreSQL, Redis, Docker
+- ✅ **What I bring**: Production AI engineering experience — shipped real SaaS platforms, RAG systems, multi-agent pipelines, and modern full-stack applications that businesses run on every day.
+- 🔥 I move fast, learn faster, and I'm HUNGRYYYYY for big challanges
 
-📬 **Contact me** via:
+📬 **Reach me at**:
 - Email: yuvraj0412s@gmail.com
-- LinkedIn: [linkedin.com/in/yuvraj-singh-77601827a](- LinkedIn: https://linkedin.com/in/yuvraj-singh-77601827a)
+- LinkedIn: [linkedin.com/in/yuvraj-singh-77601827a](https://linkedin.com/in/yuvraj-singh-77601827a)
 - GitHub: [github.com/yuvraj0412s](https://github.com/yuvraj0412s)
 
 Let's build cool shit together ✌️

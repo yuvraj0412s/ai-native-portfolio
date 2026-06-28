@@ -8,7 +8,7 @@ export function Presentation() {
   // Personal information
   const profile = {
     name: 'Yuvraj Singh',
-    age: '22 years old',
+    age: '23 years old',
     location: 'Gurugram, India',
     // Add a newline character after the emoji
     description:
