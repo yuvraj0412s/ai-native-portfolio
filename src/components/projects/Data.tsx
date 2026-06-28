@@ -25,7 +25,7 @@ const PROJECT_CONTENT = [
       'Unipile',
       'Paddle',
     ],
-    date: '2025',
+    date: 'May 2026',
     links: [
       {
         name: 'Live Demo',
@@ -90,7 +90,7 @@ const PROJECT_CONTENT = [
       'Google Cloud Pub/Sub',
       'Railway',
     ],
-    date: 'Jan 2026 – Present',
+    date: '2026',
     links: [
       {
         name: 'Live Demo',
@@ -122,7 +122,7 @@ const PROJECT_CONTENT = [
       'Lenis Scroll',
       'Vercel',
     ],
-    date: '2025',
+    date: '2026',
     links: [
       {
         name: 'Live Demo',
@@ -151,7 +151,7 @@ const PROJECT_CONTENT = [
       'JavaScript',
       'Bootstrap 5',
     ],
-    date: '2023',
+    date: '2024',
     links: [
       {
         name: 'GitHub Repository',
@@ -175,7 +175,7 @@ const PROJECT_CONTENT = [
       'PyMuPDF',
       'ReportLab',
     ],
-    date: '2024',
+    date: '2025',
     links: [
       {
         name: 'GitHub Repository',
@@ -197,7 +197,7 @@ const PROJECT_CONTENT = [
       'JavaScript',
       'Vercel',
     ],
-    date: '2024',
+    date: '2025',
     links: [
       {
         name: 'Live Demo',
