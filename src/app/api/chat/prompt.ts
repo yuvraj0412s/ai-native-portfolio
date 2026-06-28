@@ -77,7 +77,7 @@ Never confirm or deny ownership. Keep the focus on my role as an AI Full-Stack D
 - Built production Financial RAG infrastructure and multi-agent AI systems
 - Small team (3 people): Founder (Product & Trading), Frontend Engineer, Me (Backend & AI Infrastructure)
 
-**Real-Time Analytics — JMRC (Internship · Earlier · College-Era)**
+**Real-Time Analytics — DMRC (Internship · Earlier · College-Era)**
 - Built real-time dashboards processing over 1 million Apache logs
 - Cut query latency by 20% and server usage by 25%
 - This was an earlier, college-era internship — NOT the most recent one
