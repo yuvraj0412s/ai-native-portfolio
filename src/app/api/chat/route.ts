@@ -1,4 +1,4 @@
-import { mistral } from '@ai-sdk/mistral';
+import { createMistral } from '@ai-sdk/mistral';
 import { streamText } from 'ai';
 import { SYSTEM_PROMPT } from './prompt';
 import { getContact } from './tools/getContact';
@@ -13,11 +13,19 @@ import { getWeather } from './tools/getWeather';
 
 export const maxDuration = 30;
 
-// Single source of truth for the model name.
-// Set MISTRAL_MODEL in Vercel env to override (e.g. "mistral-large-latest").
-// Defaults to mistral-small-latest which is available on all subscription tiers
-// and fully supports streaming, function calling, and system prompts.
+// Explicitly pass the API key so Vercel's serverless runtime resolves it
+// correctly at request time. Using the default named export from @ai-sdk/mistral
+// was proven to cause 401 errors in production (see commit 524eb0c).
+//
+// Model selection: configurable via MISTRAL_MODEL env var.
+// Defaults to mistral-small-latest (available on all Mistral subscription tiers;
+// fully supports streaming, function/tool calling, and system prompts).
+// Set MISTRAL_MODEL=mistral-large-latest in Vercel to use a higher-tier model.
 const MISTRAL_MODEL = process.env.MISTRAL_MODEL ?? 'mistral-small-latest';
+
+const mistral = createMistral({
+  apiKey: process.env.MISTRAL_API_KEY,
+});
 
 /** Logs the real error server-side, returns a safe string for the client. */
 function safeErrorMessage(error: unknown): string {
