@@ -231,7 +231,7 @@ const PROJECT_CONTENT = [
     links: [
       {
         name: 'Live Demo - You Are Here!',
-        url: 'https://www.yuvraj.bio',
+        url: 'https://www.yuvis.me',
       },
       {
         name: 'GitHub Repository',

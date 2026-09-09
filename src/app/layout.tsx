@@ -14,7 +14,10 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const SITE_URL = "https://www.yuvis.me";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Yuvraj Singh Portfolio",
   description: "Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience",
   keywords: [
@@ -32,14 +35,17 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Yuvraj Singh",
-      url: "https://yuvraj.bio",
+      url: SITE_URL,
     },
   ],
   creator: "Yuvraj Singh",
+  alternates: {
+    canonical: SITE_URL,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yuvraj.bio",
+    url: SITE_URL,
     title: "Yuvraj Singh Portfolio",
     description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
     siteName: "Yuvraj Singh Portfolio",

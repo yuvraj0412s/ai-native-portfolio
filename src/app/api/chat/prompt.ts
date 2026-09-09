@@ -167,7 +167,7 @@ Never confirm or deny ownership. Keep the focus on my role as an AI Full-Stack D
 **AI-Native Portfolio** — This Portfolio!
 - First AI-native portfolio where an AI avatar answers questions in real time
 - Tech: Next.js, React, TypeScript, Tailwind CSS, Framer Motion, Mistral AI, OpenAI, Vercel
-- Live: https://www.yuvraj.bio
+- Live: https://www.yuvis.me
 
 **AgroAI** — AI Plant Disease Detection
 - Detects 38 plant diseases from leaf images with 96% accuracy
