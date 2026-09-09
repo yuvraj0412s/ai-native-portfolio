@@ -1,6 +1,12 @@
+import { createGroq } from '@ai-sdk/groq';
 import { createMistral } from '@ai-sdk/mistral';
-import { streamText } from 'ai';
+import { streamText, type LanguageModel, type StreamTextResult } from 'ai';
 import { SYSTEM_PROMPT } from './prompt';
+import {
+  logProviderError,
+  SAFE_CHAT_ERROR,
+  shouldUseFallback,
+} from './provider-fallback';
 import { getContact } from './tools/getContact';
 import { getCrazy } from './tools/getCrazy';
 import { getInternship } from './tools/getInternship';
@@ -13,86 +19,136 @@ import { getWeather } from './tools/getWeather';
 
 export const maxDuration = 30;
 
-// Explicitly pass the API key so Vercel's serverless runtime resolves it
-// correctly at request time. Using the default named export from @ai-sdk/mistral
-// was proven to cause 401 errors in production (see commit 524eb0c).
-//
-// Model selection: configurable via MISTRAL_MODEL env var.
-// Defaults to mistral-small-latest (available on all Mistral subscription tiers;
-// fully supports streaming, function/tool calling, and system prompts).
-// Set MISTRAL_MODEL=mistral-large-latest in Vercel to use a higher-tier model.
 const MISTRAL_MODEL = process.env.MISTRAL_MODEL ?? 'mistral-small-latest';
+const GROQ_MODEL = process.env.GROQ_MODEL ?? 'openai/gpt-oss-20b';
 
 const mistral = createMistral({
   apiKey: process.env.MISTRAL_API_KEY,
 });
 
-/** Logs the real error server-side, returns a safe string for the client. */
-function safeErrorMessage(error: unknown): string {
-  const raw =
-    error == null
-      ? 'Unknown error'
-      : typeof error === 'string'
-        ? error
-        : error instanceof Error
-          ? error.message
-          : JSON.stringify(error);
+const groq = createGroq({
+  apiKey: process.env.GROQ_API_KEY,
+});
 
-  console.error('[CHAT-API] Mistral error:', raw);
+const tools = {
+  getProjects,
+  getPresentation,
+  getResume,
+  getContact,
+  getSkills,
+  getSports,
+  getCrazy,
+  getInternship,
+  getWeather,
+};
 
-  // Detect Mistral API-level errors and return a friendly message instead of
-  // leaking subscription details or internal stack traces to the browser.
-  const lower = raw.toLowerCase();
-  if (
-    lower.includes('subscription') ||
-    lower.includes('not available') ||
-    lower.includes('unauthorized') ||
-    lower.includes('rate limit') ||
-    lower.includes('payment') ||
-    lower.includes('billing') ||
-    lower.includes('quota')
-  ) {
-    return 'AI service is temporarily unavailable. Please try again later.';
-  }
+function startChat(
+  model: LanguageModel,
+  messages: Parameters<typeof streamText>[0]['messages'],
+) {
+  return streamText({
+    model,
+    messages,
+    tools,
+    toolCallStreaming: true,
+    maxSteps: 2,
+    // Fail over instead of retrying the same provider.
+    maxRetries: 0,
+  });
+}
 
-  return 'An unexpected error occurred. Please try again.';
+/**
+ * Continue a stream after the first chunk has already been read from `reader`.
+ * A second `fullStream` access would tee() and replay the first chunk
+ * (AI SDK 4 StreamTextResult.teeStream).
+ */
+function continueFromPeekedChunk(
+  result: StreamTextResult<typeof tools, never>,
+  reader: ReadableStreamDefaultReader<unknown>,
+  first: ReadableStreamReadResult<unknown>,
+): StreamTextResult<typeof tools, never> {
+  const reconstructed = new ReadableStream({
+    async start(controller) {
+      if (!first.done && first.value !== undefined) {
+        controller.enqueue(first.value);
+      }
+    },
+    async pull(controller) {
+      const { done, value } = await reader.read();
+      if (done) {
+        controller.close();
+        return;
+      }
+      controller.enqueue(value);
+    },
+    cancel(reason) {
+      return reader.cancel(reason);
+    },
+  });
+
+  Object.defineProperty(result, 'fullStream', {
+    get: () => reconstructed,
+    configurable: true,
+  });
+
+  return result;
 }
 
 export async function POST(req: Request) {
   try {
     const { messages } = await req.json();
-    console.log('[CHAT-API] Using model:', MISTRAL_MODEL);
-
     messages.unshift(SYSTEM_PROMPT);
 
-    const tools = {
-      getProjects,
-      getPresentation,
-      getResume,
-      getContact,
-      getSkills,
-      getSports,
-      getCrazy,
-      getInternship,
-      getWeather,
-    };
+    const mistralResult = startChat(mistral(MISTRAL_MODEL), messages);
+    const peekReader = mistralResult.fullStream.getReader();
+    const firstChunk = await peekReader.read();
 
-    const result = streamText({
-      model: mistral(MISTRAL_MODEL),
-      messages,
-      toolCallStreaming: true,
-      tools,
-      maxSteps: 2,
-    });
+    const mistralError =
+      !firstChunk.done &&
+      firstChunk.value != null &&
+      typeof firstChunk.value === 'object' &&
+      'type' in firstChunk.value &&
+      firstChunk.value.type === 'error'
+        ? (firstChunk.value as { type: 'error'; error: unknown }).error
+        : undefined;
 
-    return result.toDataStreamResponse({
-      getErrorMessage: safeErrorMessage,
+    const canFallback =
+      mistralError !== undefined &&
+      shouldUseFallback(mistralError) &&
+      Boolean(process.env.GROQ_API_KEY);
+
+    if (canFallback) {
+      await peekReader.cancel();
+      logProviderError('mistral', MISTRAL_MODEL, mistralError, {
+        fallbackAttempted: true,
+      });
+      console.log('[CHAT-API] Falling back to Groq', GROQ_MODEL);
+
+      return startChat(groq(GROQ_MODEL), messages).toDataStreamResponse({
+        getErrorMessage: () => SAFE_CHAT_ERROR,
+      });
+    }
+
+    if (mistralError !== undefined) {
+      logProviderError('mistral', MISTRAL_MODEL, mistralError, {
+        fallbackAttempted: false,
+      });
+    } else {
+      console.log('[CHAT-API] Primary: Mistral', MISTRAL_MODEL);
+    }
+
+    return continueFromPeekedChunk(
+      mistralResult,
+      peekReader,
+      firstChunk,
+    ).toDataStreamResponse({
+      getErrorMessage: () => SAFE_CHAT_ERROR,
     });
   } catch (err) {
-    console.error('[CHAT-API] Global error:', err);
-    return new Response(
-      'AI service is temporarily unavailable. Please try again later.',
-      { status: 500 },
+    console.error(
+      '[CHAT-API] Global error:',
+      err instanceof Error ? err.message : 'unknown',
     );
+    return new Response(SAFE_CHAT_ERROR, { status: 500 });
   }
 }

@@ -90,12 +90,16 @@ Want to get this project running on your local machine? Follow these simple step
     SPOTIFY_CLIENT_SECRET="your_spotify_client_secret"
     SPOTIFY_REFRESH_TOKEN="your_spotify_refresh_token"
 
-    # Optional: override the Mistral model (default: mistral-small-latest)
+    # Optional model overrides (defaults shown)
     # MISTRAL_MODEL="mistral-small-latest"
+    GROQ_API_KEY="your_groq_api_key_here"
+    # GROQ_MODEL="openai/gpt-oss-20b"
     ```
-    *   Get your Mistral API Key from [admin.mistral.ai](https://admin.mistral.ai/organization/api-keys).
+    *   Get your Mistral API Key from [admin.mistral.ai](https://admin.mistral.ai/organization/api-keys) — **primary AI provider**.
+    *   Get your Groq API Key from [console.groq.com](https://console.groq.com) — **fallback provider** (used when Mistral is temporarily unavailable, e.g. HTTP 429).
     *   Generate your GitHub Token at [github.com/settings/tokens](https://github.com/settings/personal-access-tokens).
-    *   `MISTRAL_MODEL` is optional. Defaults to `mistral-small-latest` which is available on all subscription tiers. Set to `mistral-large-latest` if your plan supports it.
+
+    **AI provider order:** Mistral (`mistral-small-latest`) → Groq (`openai/gpt-oss-20b`). The fallback is transparent to visitors. `MISTRAL_MODEL` and `GROQ_MODEL` are optional. All keys are server-side only — never `NEXT_PUBLIC_*`.
 
 4.  **Run the development server:**
     ```sh
